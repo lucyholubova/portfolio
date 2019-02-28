@@ -47,7 +47,7 @@ a {
     z-index: 10;
     height: 100vh;
     overflow: visible;
-    background-color:#333;
+    /*background-color:#333;*/
 }
 
 .header-title{
