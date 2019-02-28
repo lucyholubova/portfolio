@@ -10,35 +10,85 @@
 </head>
  
  
-<body> 
+<body>
+<iframe src="music/s.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+<audio autoplay loop>
+	<source src="music/song.mp3" type="audio/mpeg">
+</audio>
 	<div class="fullscreen-bg">
-	    <video loop muted autoplay poster="img/wave.jpg" class="fullscreen-bg__video">
-	        <source src="img/water.mp4" type="video/mp4">
+
+			<video class="fullscreen-bg__video" loop muted autoplay poster="img/lucy.jpg" >
+	        <source src="img/lucy.mov" type="video/mp4">
 	    </video>
 	</div>
-	<div class="header">
-		<h1 class="header-title"> SOFTWARE DEVELOPER WITH VISUAL PASSION NOW AVAILABLE FOR YOU </h1>
-		<div class="vl"></div>
-		<img src="img/L90.png" alt="logo">
-	</div>
 
-	<section>
-		<div class="vl"></div>
-		<img src="img/L90.png" alt="logo">
-		<h2> WHO AM I ?</h2>
-	</section>
-
-	<section>
-		<div class="vl"></div>
-		<img src="img/L90.png" alt="logo">
-
-		<div class="mybio"> hello my name is lucy and i am driven by ideas and full time thinking my no.1 passion
-		is sitting behind a computer and type i love coding code is everything also i moved to england in 2012 so
-			it has been a while since and my boyfriend is great
+	<a href="#who">
+		<div id="header" class="header">
+			<h1 class="header-title"> SOFTWARE DEVELOPER WITH VISUAL PASSION AVAILABLE FOR YOU NOW </h1>
+			<div class="vl"></div>
 		</div>
+	</a>
+
+	<a href="#bio">
+		<section id="who">
+			<img src="img/L90.png" class="logo" alt="logo">
+			<h2 class="whoami"> WHO AM I ?</h2>
+			<div class="vl"></div>
+		</section>
+	</a>
+
+	<a href="#portfolio">
+		<section id="bio">
+			<img src="img/L90.png" class="logo" alt="logo">
+			<div class="mybio"> hello my name is lucy and i am driven by ideas and full time thinking my no.1 passion
+			is sitting behind a computer and type i love coding code is everything also i moved to england in 2012 so
+				it has been a while since and my boyfriend is great
+				<div class="vl"></div>
+			</div>
+		</section>
+	</a>
 
 
+	<section id="portfolio">
+		<a href="#contact" class="contact-link"></a>
+		<div class="portfolio">
+			<img src="img/L90.png" class="logo" alt="logo">
+			<h2 class="work">
+				<a href="#contact">WORK</a>
+				<div class="numbers">
+					<a href=# class="options1"> 1 </a>
+					<a href=# class="options2"> 2 </a>
+					<a href=# class="options3"> 3 </a>
+				</div>
+			</h2>
+			<div class="vl"></div>
+		</div>
 	</section>
+
+
+	<section id="contact">
+		<div class="contact_main">
+			<img src="img/L90.png" class="logo" alt="logo">
+			<h2 class="contacts">
+				<a href="#header">LUCY HOLUBOVA</a>
+				<div class="details">
+					<a href="#" class="contact">CONTACT</a>
+					<a href="mailto:lucy.holubova90@gmail.com" class="email">EMAIL</a>
+					<a href="https://www.instagram.com/lucccul/" class="instagram">INSTAGRAM</a>
+				</div>
+			</h2>
+			<div class="vl"></div>
+			<p> MADE WITH LOVE </p>
+
+		</div>
+	</section>
+
+
+
+
+
+
+
 
 
 </body>
