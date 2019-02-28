@@ -1,5 +1,5 @@
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 @font-face {
@@ -31,7 +31,7 @@ a {
 
 .fullscreen-bg__video {
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 0;
     min-height: 100vh;
     min-width: 100%;
@@ -46,7 +46,7 @@ a {
 }
 
 .header-title {
-    color: whitesmoke;
+    color: #f5f5f5;
     margin: 0;
     position: absolute;
     text-align: center;
@@ -61,7 +61,7 @@ a {
     height: 90px;
     position: absolute;
     top: 10px;
-    left:50%;
+    left: 50%;
     z-index: 10;
 }
 
@@ -80,7 +80,7 @@ section {
     overflow: hidden;
     width: 100%;
     height: 100vh;
-    background-color: whitesmoke;
+    background-color: #f5f5f5;
 }
 
 section h2 {
@@ -125,13 +125,13 @@ section h2.contacts {
     overflow: hidden;
     width: 100%;
     height: 100vh;
-    background-color: whitesmoke;
+    background-color: #f5f5f5;
 
 }
 
 .numbers {
-    color:red;
-    margin:0 auto;
+    color: #ff0000;
+    margin: 0 auto;
     width: 100px;
     font-size: 40px;
     padding-right: 210px;
@@ -140,7 +140,8 @@ section h2.contacts {
 
 .numbers a {
     text-decoration: none;
-    color:red;
+    color: #ff0000;
+}
 }
 
 .contact_main {
@@ -148,12 +149,11 @@ section h2.contacts {
     overflow: hidden;
     width: 100%;
     height: 100vh;
-    background-color: whitesmoke;
+    background-color: #f5f5f5;
 
 }
 
 .details {
-
     display: inline-block;
     margin-left: 50px;
 }
@@ -175,7 +175,6 @@ section h2.contacts {
     bottom: 0;
     left: 0;
     right: 0;
-    /*background: blue;*/
     z-index: 5;
 }
 
@@ -184,7 +183,7 @@ audio {
 }
 
 p {
-    width:100%;
+    width: 100%;
     padding-left: 14%;
     border-radius: 35px;
     color: black;
@@ -193,3 +192,12 @@ p {
     margin-left: 40%;
 }
 
+@media only screen and (max-width: 320px) {
+    .details {
+        margin-left: 0;
+    }
+
+    .details a {
+        font-size: .8rem;
+    }
+}
