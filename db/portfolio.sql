@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.43)
 # Database: Project_2
-# Generation Time: 2019-03-15 15:46:39 +0000
+# Generation Time: 2019-03-15 15:59:01 +0000
 # ************************************************************
 
 
@@ -29,17 +29,18 @@ CREATE TABLE `portfolio` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` int(2) NOT NULL,
   `url` varchar(255) NOT NULL DEFAULT '',
+  `coment` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `portfolio` WRITE;
 /*!40000 ALTER TABLE `portfolio` DISABLE KEYS */;
 
-INSERT INTO `portfolio` (`id`, `name`, `url`)
+INSERT INTO `portfolio` (`id`, `name`, `url`, `coment`)
 VALUES
-	(1,1,'www.google.com'),
-	(2,2,'www.google.com'),
-	(3,3,'www.google.com');
+	(1,1,'www.google.com','pilot shop'),
+	(2,2,'www.google.com','logo'),
+	(3,3,'www.google.com',NULL);
 
 /*!40000 ALTER TABLE `portfolio` ENABLE KEYS */;
 UNLOCK TABLES;
