@@ -57,6 +57,9 @@
 				<a href="#contact">WORK</a>
 				<div class="numbers">
                     <?php
+                    if (empty($result)) {
+                        echo 'unexpected error';
+                    }
                     foreach ($result as $project) {
                         echo '<a href="' . $project['url'] . '">' . $project['name'] . '</a>';
                     }
