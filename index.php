@@ -1,5 +1,8 @@
-<!DOCTYPE html>
+<?php
+    require('project2/fetch.php');
+?>
 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -53,9 +56,12 @@
 			<h2 class="work">
 				<a href="#contact">WORK</a>
 				<div class="numbers">
-					<a href="#" class="options1"> 1 </a>
-					<a href="#" class="options2"> 2 </a>
-					<a href="#" class="options3"> 3 </a>
+                    <?php
+                    foreach ($result as $project) {
+                        echo '<a href="' . $project['url'] . '">' . $project['name'] . '</a>';
+                    }
+
+                    ?>
 				</div>
 			</h2>
 			<div class="vl"></div>
