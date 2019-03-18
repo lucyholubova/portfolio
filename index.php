@@ -1,5 +1,5 @@
 <?php
-    require('portfolio.edit/portfolio.php');
+    require('portfolio-edit/portfolio.php');
 ?>
 
 <!DOCTYPE html>
