@@ -1,5 +1,5 @@
 <?php
-    require('project2/fetch.php');
+    require('portfolio.edit/portfolio.php');
 ?>
 
 <!DOCTYPE html>
@@ -59,12 +59,12 @@
                     <?php
                     if (empty($result)) {
                         echo 'unexpected error';
+                    } else {
+                        foreach ($result as $project) {
+                            echo '<a href="' . $project['url'] . '">' . $project['name'] . '</a>';
+                        }
                     }
-                    foreach ($result as $project) {
-                        echo '<a href="' . $project['url'] . '">' . $project['name'] . '</a>';
-                    }
-
-                    ?>
+                         ?>
 				</div>
 			</h2>
 			<div class="vl"></div>
