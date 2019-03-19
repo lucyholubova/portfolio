@@ -1,8 +1,5 @@
-<?php
-    require('portfolio-edit/portfolio.php');
-?>
-
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -56,15 +53,9 @@
 			<h2 class="work">
 				<a href="#contact">WORK</a>
 				<div class="numbers">
-                    <?php
-                    if (empty($result)) {
-                        echo 'unexpected error';
-                    } else {
-                        foreach ($result as $project) {
-                            echo '<a href="' . $project['url'] . '">' . $project['name'] . '</a>';
-                        }
-                    }
-                         ?>
+					<a href="#" class="options1"> 1 </a>
+					<a href="#" class="options2"> 2 </a>
+					<a href="#" class="options3"> 3 </a>
 				</div>
 			</h2>
 			<div class="vl"></div>
