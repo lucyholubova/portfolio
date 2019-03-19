@@ -3,7 +3,7 @@ $db = new PDO('mysql:host=192.168.20.20;dbname=Project_2', 'root', '');
 $db-> setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 $sql = ' SELECT `name`, `url` FROM `portfolio`;';
 $query = $db->query($sql);
-$result = $query->fetchAll();
+$projects = $query->fetchAll();
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +24,7 @@ $result = $query->fetchAll();
     </thead>
     <tbody>
     <?php
-    foreach($result as $project){
+    foreach($projects as $project){
         echo '<tr><td>' . $project['name'] . '</td>';
         echo '<td>' . $project['url'] . '</td>';
         echo '<td> <input class="edit" type="submit" value="edit"</td>';
@@ -34,43 +34,6 @@ $result = $query->fetchAll();
     ?>
     </tbody>
 
-
 </table>
-
-
-<!--    <div class="1">-->
-<!--        <li> 1-->
-<!--        <a>www.google.com</a>-->
-<!--        <button type="button1" id="eddit"-->
-<!--        </button>-->
-<!--        Edit-->
-<!--        <button type="button2" id="eddit"-->
-<!--        </button>-->
-<!--        Delete-->
-<!--        </li>-->
-<!--        </div>-->
-<!---->
-<!--        <div class="2">-->
-<!--            <li> 2 </li-->
-<!--        ><a>www.google.com</a>-->
-<!--        <button type="button1" id="eddit"-->
-<!--        </button>-->
-<!--        Edit-->
-<!--        <button type="button2" id="eddit"-->
-<!--        </button>-->
-<!--        Delete-->
-<!--        </div>-->
-<!---->
-<!--        <div class="3">-->
-<!--            <li> 3 </li-->
-<!--        ><a>www.google.com</a>-->
-<!--        <button type="button1" id="eddit"-->
-<!--        </button>-->
-<!--        Edit-->
-<!--        <button type="button2" id="eddit"-->
-<!--        </button>-->
-<!--        Delete-->
-<!--        </div>-->
-<!--div-->
 </head>
 </body>
