@@ -10,16 +10,25 @@ $result = $query->fetchAll();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+<link rel="stylesheet" href="panel.css">
 <body>
 
 <h1> Admin page </h1>
+
+<body>
+<?php
+echo '
+<div class="addNewProject"*> <a href="panel.html"><input type="submit" value="add new project"></a></div>';
+?>
+</body>
+
 <table>
     <thead>
         <tr>
             <th> Projects </th>
             <th> URL </th>
             <th> Edit </th>
-            <th> Delete</th>
+            <th> Delete </th>
         </tr>
     </thead>
     <tbody>
@@ -28,9 +37,10 @@ $result = $query->fetchAll();
         echo '<tr><td>' . $project['name'] . '</td>';
         echo '<td>' . $project['url'] . '</td>';
         echo '<td> <input class="edit" type="submit" value="edit"</td>';
-        echo '<td> <input class="deletet" type="submit" value="delete"</td>';
+        echo '<td> <input class="delete" type="submit" value="delete"</td>';
 
     }
+
     ?>
     </tbody>
 
@@ -38,39 +48,5 @@ $result = $query->fetchAll();
 </table>
 
 
-<!--    <div class="1">-->
-<!--        <li> 1-->
-<!--        <a>www.google.com</a>-->
-<!--        <button type="button1" id="eddit"-->
-<!--        </button>-->
-<!--        Edit-->
-<!--        <button type="button2" id="eddit"-->
-<!--        </button>-->
-<!--        Delete-->
-<!--        </li>-->
-<!--        </div>-->
-<!---->
-<!--        <div class="2">-->
-<!--            <li> 2 </li-->
-<!--        ><a>www.google.com</a>-->
-<!--        <button type="button1" id="eddit"-->
-<!--        </button>-->
-<!--        Edit-->
-<!--        <button type="button2" id="eddit"-->
-<!--        </button>-->
-<!--        Delete-->
-<!--        </div>-->
-<!---->
-<!--        <div class="3">-->
-<!--            <li> 3 </li-->
-<!--        ><a>www.google.com</a>-->
-<!--        <button type="button1" id="eddit"-->
-<!--        </button>-->
-<!--        Edit-->
-<!--        <button type="button2" id="eddit"-->
-<!--        </button>-->
-<!--        Delete-->
-<!--        </div>-->
-<!--div-->
 </head>
 </body>
