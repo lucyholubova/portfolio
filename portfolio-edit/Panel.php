@@ -27,8 +27,8 @@ $projects = $query->fetchAll();
     foreach($projects as $project){
         echo '<tr><td>' . $project['name'] . '</td>';
         echo '<td>' . $project['url'] . '</td>';
-        echo '<td> <input class="edit" type="submit" value="edit"</td>';
-        echo '<td> <input class="deletet" type="submit" value="delete"</td>';
+        echo '<td> <input class="edit" type="submit" value="edit"></td>';
+        echo '<td> <input class="delete" type="submit" value="delete"></td>';
 
     }
     ?>
