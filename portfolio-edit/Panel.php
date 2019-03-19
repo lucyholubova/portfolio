@@ -18,7 +18,7 @@ $result = $query->fetchAll();
 <body>
 <?php
 echo '
-<div class="addNewProject"*> <a href="panel.html"><input type="submit" value="add new project"></a></div>';
+<div class="addNewProject"> <a href="panel.html"> add new project</a></div>';
 ?>
 </body>
 
@@ -36,7 +36,7 @@ echo '
     foreach($result as $project){
         echo '<tr><td>' . $project['name'] . '</td>';
         echo '<td>' . $project['url'] . '</td>';
-        echo '<td> <input class="edit" type="submit" value="edit"</td>';
+        echo '<td> <input class="edit" type="submit" value="  edit "</td>';
         echo '<td> <input class="delete" type="submit" value="delete"</td>';
 
     }
