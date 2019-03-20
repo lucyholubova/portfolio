@@ -1,5 +1,8 @@
+<?php
+$id = $_GET['id'];
+?>
+
 <!DOCTYPE html>
-<body>
 
 <form method="POST" action="add-new-project.php">
     <label for="pname">Project Name</label>
@@ -14,4 +17,3 @@
     <input type="submit">
 
 </form>
-</body>

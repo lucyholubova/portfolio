@@ -1,9 +1,9 @@
 <?php
 $db = new PDO('mysql:host=192.168.20.20;dbname=Project_2', 'root', '');
 $db-> setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-$sql = ' SELECT `name`, `url` FROM `portfolio`;';
+$sql = ' SELECT `id`, `name`, `url` FROM `portfolio`;';
 $query = $db->query($sql);
-$result = $query->fetchAll();
+$projects = $query->fetchAll();
 ?>
 
 <!DOCTYPE html>
@@ -11,16 +11,11 @@ $result = $query->fetchAll();
 <head>
     <meta charset="UTF-8">
 <link rel="stylesheet" href="panel.css">
-<body>
+</head>
 
+<body>
 <h1> Admin page </h1>
-
-<body>
-<?php
-echo '
-<div class="addNewProject"> <a href="panel.html"> add new project</a></div>';
-?>
-</body>
+<div class="addNewProject"> <a href="panel.html"> add new project</a></div>
 
 <table>
     <thead>
@@ -33,10 +28,10 @@ echo '
     </thead>
     <tbody>
     <?php
-    foreach($result as $project){
+    foreach($projects as $project){
         echo '<tr><td>' . $project['name'] . '</td>';
         echo '<td>' . $project['url'] . '</td>';
-        echo '<td> <input class="edit" type="submit" value="  edit "</td>';
+        echo '<td> <a class="edit" href="edit-project.php?id=' . $project['id'] . '">edit</a></td>';
         echo '<td> <input class="delete" type="submit" value="delete"</td>';
 
     }
@@ -48,5 +43,5 @@ echo '
 </table>
 
 
-</head>
+
 </body>
