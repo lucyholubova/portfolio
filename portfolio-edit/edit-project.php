@@ -10,7 +10,6 @@ foreach($projects as $project){
     }
 }
 ?>
-
 <!DOCTYPE html>
 
 <form method="POST" action="edit-existing-project.php">
