@@ -1,3 +1,12 @@
+<?php
+// Lucia V wrote this, ignore me
+session_start();
+if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn']) {
+    header('Location: login-form.html');
+}
+// End of Lucia's shit
+?>
+
 <!DOCTYPE html>
 <body>
 

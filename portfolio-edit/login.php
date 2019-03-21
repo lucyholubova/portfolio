@@ -17,6 +17,12 @@ if ($user){
     $passwordMatches = password_verify($password, $user['password']);
     if ($passwordMatches){
         //if correct we are logged in to admin page
+
+        // Lucia V. did this hack but I want to submit it so...
+        session_start();
+        $_SESSION['loggedIn'] = true;
+        // End of Lucia's hacks
+
         header('Location: panel.php');
     } else{
     //if not correct throw the error

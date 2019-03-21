@@ -1,6 +1,13 @@
 <?php
 
 include './pullPortfolio.php';
+// Lucia V wrote this, ignore me
+session_start();
+if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn']) {
+    header('Location: login-form.html');
+}
+// End of Lucia's shit
+
 if (empty($_GET['id'])) {
     echo 'unexpected error no id set';
 } else {

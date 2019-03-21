@@ -1,5 +1,12 @@
 <?php
 include './pullPortfolio.php';
+// Lucia V wrote this, ignore me
+session_start();
+if(!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn']) {
+//    var_dump($_SESSION);
+    header('Location: login-form.html');
+}
+// End of Lucia's shit
 
 $projects = pullPortfolio();
 ?>
@@ -12,7 +19,8 @@ $projects = pullPortfolio();
 </head>
 <body>
 <h1> Admin page </h1>
-<div class="addNewProject"> <a href="panel.html"> add new project</a></div>
+<div class="addNewProject"> <a href="logout.php"> Logout</a></div>
+<div class="addNewProject"> <a href="add-project.php"> add new project</a></div>
 <table>
     <thead>
         <tr>
