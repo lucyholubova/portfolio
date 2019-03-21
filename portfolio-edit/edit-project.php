@@ -16,16 +16,19 @@ foreach($projects as $project){
         $currentProject = $project;
     }
 }
+
 ?>
-<form method="POST" action="add-new-project.php">
+<form method="POST" action="edit-existing-project.php">
     <label for="pname">Project Name</label>
-    <input value="<?= $project['name'] ?>" type="text" name="pname" id="pname">
+    <input value="<?= $currentProject['name'] ?>" type="text" name="pname" id="pname">
 
     <label for="url">Project Url</label>
-    <input value="<?= $project['url'] ?>" type="text" name="url" id="url">
+    <input value="<?= $currentProject['url'] ?>" type="text" name="url" id="url">
 
     <label for="comment">Project comment</label>
-    <input value="<?= $project['comment'] ?>" type="text" name="comment" id="comment">
+    <input value="<?= $currentProject['comment'] ?>" type="text" name="comment" id="comment">
+
+    <input type="hidden" id="pid" name="pid" value="<?= $currentProject['id'] ?>">
 
     <input type="submit">
 

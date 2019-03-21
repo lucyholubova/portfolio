@@ -1,7 +1,7 @@
 <?php
 include './pullPortfolio.php';
 
-$projects = pullPortfolio();
+$projects = pullPortfolios();
 
 ?>
 
