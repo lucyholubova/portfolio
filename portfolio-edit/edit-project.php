@@ -14,8 +14,7 @@ if (empty($_GET['id'])) {
     $query->execute([
             ":projectId"=>$id
     ]);
-    $result = $query ->fetchAll();
-    $currentProject = $result[0];
+    $currentProject = $query ->fetch();
 
     ?>
     <!DOCTYPE html>
