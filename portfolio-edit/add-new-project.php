@@ -6,14 +6,13 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $sql = "INSERT INTO `portfolio` (`name`, `url`, `comment`) VALUES (:projectName, :projectUrl, :projectComment);";
 
 
-    if (!empty($_POST['pname']) && !empty($_POST['url']) && !empty($_POST['comment'])) {
-        $query = $db->prepare($sql);
-        $query->execute([
-            ':projectName' => $_POST['pname'],
-            ':projectUrl' => $_POST['url'],
-            ':projectComment' => $_POST['comment']
-        ]);
-    } else  {
-        echo 'error';
-
-    }
+if (!empty($_POST['pname']) && !empty($_POST['url']) && !empty($_POST['comment'])) {
+    $query = $db->prepare($sql);
+    $query->execute([
+        ':projectName' => $_POST['pname'],
+        ':projectUrl' => $_POST['url'],
+        ':projectComment' => $_POST['comment']
+    ]);
+} else  {
+    echo 'error';
+}

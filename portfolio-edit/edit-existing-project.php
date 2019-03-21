@@ -2,7 +2,6 @@
 
 $db = new PDO('mysql:host=192.168.20.20;dbname=Project_2', 'root', '');
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
 $sql = "UPDATE `portfolio` SET `name` = :projectName, `url` = :projectUrl, `comment`= :projectComment WHERE `id`= :projectId;";
 
 if (!empty($_POST['pname']) && !empty($_POST['url']) && !empty($_POST['comment']) && !empty($_POST['pid'])) {
@@ -16,5 +15,4 @@ if (!empty($_POST['pname']) && !empty($_POST['url']) && !empty($_POST['comment']
     echo "Success!";
 } else {
     echo 'error';
-
 }

@@ -1,24 +1,20 @@
 <?php
 
 include './pullPortfolio.php';
-
 $id = $_GET['id'];
-
 $projects = pullPortfolio();
 $currentProject;
-?>
-
-<!DOCTYPE html>
-<?php
-
 foreach($projects as $project){
     if ($project['id'] === $id) {
         $currentProject = $project;
     }
 }
-
 ?>
+
+<!DOCTYPE html>
+
 <form method="POST" action="edit-existing-project.php">
+
     <label for="pname">Project Name</label>
     <input value="<?= $currentProject['name'] ?>" type="text" name="pname" id="pname">
 
