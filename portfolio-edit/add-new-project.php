@@ -5,14 +5,18 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $sql = "INSERT INTO `portfolio` (`name`, `url`, `comment`) VALUES (:projectName, :projectUrl, :projectComment);";
 
-
 if (!empty($_POST['pname']) && !empty($_POST['url']) && !empty($_POST['comment'])) {
     $query = $db->prepare($sql);
-    $query->execute([
+    $result = $query->execute([
         ':projectName' => $_POST['pname'],
         ':projectUrl' => $_POST['url'],
         ':projectComment' => $_POST['comment']
     ]);
-} else  {
-    echo 'error';
+    if ($result) {
+        header('Location: panel.php');
+    } else {
+        echo 'unexpected error';
+    }
+} else {
+    echo 'error wrong data';
 }

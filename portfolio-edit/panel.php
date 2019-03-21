@@ -1,8 +1,7 @@
 <?php
 include './pullPortfolio.php';
 
-$projects = pullPortfolios();
-
+$projects = pullPortfolio();
 ?>
 
 <!DOCTYPE html>

@@ -6,13 +6,17 @@ $sql = "UPDATE `portfolio` SET `name` = :projectName, `url` = :projectUrl, `comm
 
 if (!empty($_POST['pname']) && !empty($_POST['url']) && !empty($_POST['comment']) && !empty($_POST['pid'])) {
     $query = $db->prepare($sql);
-    $query->execute([
+    $result = $query->execute([
         ':projectName' => $_POST['pname'],
         ':projectUrl' => $_POST['url'],
         ':projectComment' => $_POST['comment'],
         ':projectId' => $_POST['pid']
     ]);
-    echo "Success!";
+    if ($result) {
+        header('Location: panel.php');
+    } else {
+        echo 'unexpected error';
+    }
 } else {
-    echo 'error';
+    echo 'error wrong data';
 }
