@@ -1,9 +1,7 @@
 <?php
-$db = new PDO('mysql:host=192.168.20.20;dbname=Project_2', 'root', '');
-$db-> setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-$sql = ' SELECT `id`, `name`, `url` FROM `portfolio`;';
-$query = $db->query($sql);
-$projects = $query->fetchAll();
+include './pullPortfolio.php';
+
+$projects = pullPortfolio();
 ?>
 
 <!DOCTYPE html>
@@ -12,11 +10,9 @@ $projects = $query->fetchAll();
     <meta charset="UTF-8">
 <link rel="stylesheet" href="panel.css">
 </head>
-
 <body>
 <h1> Admin page </h1>
 <div class="addNewProject"> <a href="panel.html"> add new project</a></div>
-
 <table>
     <thead>
         <tr>
@@ -28,22 +24,13 @@ $projects = $query->fetchAll();
     </thead>
     <tbody>
     <?php
-    foreach($projects as $project){
+    foreach ($projects as $project){
         echo '<tr><td>' . $project['name'] . '</td>';
         echo '<td>' . $project['url'] . '</td>';
         echo '<td> <a class="edit" href="edit-project.php?id=' . $project['id'] . '">edit</a></td>';
         echo '<td> <input class="delete" type="submit" value="delete"</td>';
     }
-
     ?>
     </tbody>
-
 </table>
-<<<<<<< HEAD
-</head>
-=======
-
-
-
->>>>>>> add-project
 </body>
