@@ -12,7 +12,7 @@ $projects = pullPortfolio();
 </head>
 <body>
 <h1> Admin page </h1>
-<div class="addNewProject"> <a href="panel.html"> add new project</a></div>
+<div class="addNewProject"> <a href="add-project.html"> add new project</a></div>
 <table>
     <thead>
         <tr>
@@ -28,7 +28,7 @@ $projects = pullPortfolio();
         echo '<tr><td>' . $project['name'] . '</td>';
         echo '<td>' . $project['url'] . '</td>';
         echo '<td> <a class="edit" href="edit-project.php?id=' . $project['id'] . '">edit</a></td>';
-        echo '<td> <input class="delete" type="submit" value="delete"</td>';
+        echo '<td> <a class="delete" href="delete-project.php?id=' . $project['id'] . '">delete</a></td>';
     }
     ?>
     </tbody>
