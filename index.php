@@ -78,7 +78,7 @@
 			<h2 class="contacts">
 				<a href="#header">LUCY HOLUBOVA</a>
 				<div class="details">
-					<a href="https://github.com/lucyholubva" class="github">GITHUB</a>
+					<a href="https://github.com/lucyholubova" class="github">GITHUB</a>
 					<a href="mailto:lucy.holubova90@gmail.com" class="email">EMAIL</a>
 					<a href="https://www.instagram.com/lucccul/" class="instagram">INSTAGRAM</a>
 				</div>
